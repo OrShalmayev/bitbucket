@@ -14,6 +14,10 @@
         // print_r($this->getUrl());
 
         $url = $this->getUrl();
+        
+        // ** Debug ** 
+        // var_dump($url);
+        // ** End Debug ** 
 
         // Look in  controller for the first value
         if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {

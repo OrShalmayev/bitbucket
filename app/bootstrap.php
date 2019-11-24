@@ -1,4 +1,7 @@
 <?php
+// Start session
+session_start();
+
 // Load Config 
 require_once('config/config.php');
 // Load Libraries
