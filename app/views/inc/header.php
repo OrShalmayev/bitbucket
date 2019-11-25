@@ -8,12 +8,12 @@
       </a>
     <?php endif; ?>
   </h5>
-  <nav class="my-2 my-md-0 mr-md-3 ">
+  <!-- <nav class="my-2 my-md-0 mr-md-3 ">
     <a class="p-2 text-white " href="#">Features</a>
     <a class="p-2 text-white " href="#">Enterprise</a>
     <a class="p-2 text-white " href="#">Support</a>
     <a class="p-2 text-white " href="#">Pricing</a>
-  </nav>
+  </nav> -->
   <?php if(isset($_SESSION['isAdmin'])): ?>
     <a class="btn btn-outline-danger text-white" href="<?php echo URLROOT; ?>admins/logout">
       <i class="fas fa-sign-out-alt"></i>

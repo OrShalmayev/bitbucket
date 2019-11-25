@@ -36,10 +36,11 @@ class Admins extends Controller {
         // if admin then allow viewing the admin page
         if($_SESSION['isAdmin']){
             $_SESSION['current_url']="all_patients";
+            // var_dump($this->userModel->getUsers());
             $data = [
                 'title' => 'All Patients',
-                'icon' => 'fas fa-users'
-
+                'icon' => 'fas fa-users',
+                'users' => $this->userModel->getUsers()
             ];
 
             $this->view('admin/index', $data);
@@ -65,10 +66,9 @@ class Admins extends Controller {
                 $patient_type = $_POST['patient_type'];
                 $patient_email = $_POST['patient_email'];
                 $this->userModel->addUser($patient_type, $patient_email);
-            }else{
-
+                // redirect to all patients
+                header("Location:".URLROOT.'admins/all_patients');
             }
-
 
             $this->view('admin/index', $data);
 
